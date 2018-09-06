@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{B48F4630-DD69-4059-9141-A1E23A5D68E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBar.UserInterface.WPF", "ProgressBar.UserInterface.WPF\ProgressBar.UserInterface.WPF.csproj", "{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BD9EA8D-480E-46B7-ABC7-9CC2A7619BE6} = {B48F4630-DD69-4059-9141-A1E23A5D68E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E149217-A924-4A84-986F-F76B8C57AC14}
