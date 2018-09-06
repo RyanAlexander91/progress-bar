@@ -5,8 +5,90 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgressBar.UserInterface.WPF"
         mc:Ignorable="d"
-        Title="Progress Bar" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Progress Bar" Height="300" Width="300">
+    <DockPanel x:Name="DockPanel_Main">
+
+        <!-- Menu -->
+        <Menu x:Name="MainMenu"
+              DockPanel.Dock="Top">
+            <MenuItem x:Name="MenuItem_File"
+                      Header="File">
+                <MenuItem x:Name="MenuItem_Reset"
+                      Header="Reset"
+                      Click="MenuItem_Reset_Click"/>
+                <Separator/>
+                <MenuItem x:Name="MenuItem_Exit"
+                      Header="Exit"/>
+            </MenuItem>
+            <MenuItem x:Name="Menu_ItemAbout"
+                      Header="About"/>
+        </Menu>
+
+
+        <Grid x:Name="Grid_MainGrid"
+              Background="RosyBrown">
+
+            <!-- Grid Row and Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <!-- Controls -->
+
+            <TextBlock x:Name="TextBlock_Information"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"
+                   Text="Please enter a number between 0 and 100 to see the progress bar update" 
+                   TextWrapping="Wrap"/>
+
+            <ProgressBar x:Name="ProgressBar_Main"
+                         Grid.Column="1"
+                         Grid.Row="2"
+                         Height="20"
+                         Margin="0,0,0,10"
+                         Minimum="0"
+                         Maximum="100"
+                         Value="0">
+            </ProgressBar>
+
+            <TextBox x:Name="TextBox_Entry"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       Height="20"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       />
+
+            <Button x:Name="Button_Update"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Margin="0,0,0,10"
+                    Content="Update"
+                    Click="Button_Update_Click"/>
+
+            <Button x:Name="Button_Reset"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    
+                    Content="Reset"
+                    Click="MenuItem_Reset_Click"/>
+
+        </Grid>
+
+    </DockPanel>
 </Window>
