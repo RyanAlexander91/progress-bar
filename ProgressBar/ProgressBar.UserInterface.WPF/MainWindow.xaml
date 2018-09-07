@@ -18,10 +18,18 @@
                       Click="MenuItem_Reset_Click"/>
                 <Separator/>
                 <MenuItem x:Name="MenuItem_Exit"
-                      Header="Exit"/>
+                      Header="Exit"
+                      Click="MenuItem_Exit_Click"/>
             </MenuItem>
-            <MenuItem x:Name="Menu_ItemAbout"
-                      Header="About"/>
+            <MenuItem x:Name="MenuItem_Help"
+                      Header="Help">
+                <MenuItem x:Name="MenuItem_Acknowledgements"
+                          Header="Acknowledgement"
+                          Click="MenuItem_Acknowledgements_Click"/>
+                <MenuItem x:Name="MenuItem_About"
+                          Header="About"
+                          Click="MenuItem_About_Click"/>
+            </MenuItem>
         </Menu>
 
 
@@ -59,10 +67,7 @@
                          Grid.Column="1"
                          Grid.Row="2"
                          Height="20"
-                         Margin="0,0,0,10"
-                         Minimum="0"
-                         Maximum="100"
-                         Value="0">
+                         Margin="0,0,0,10">
             </ProgressBar>
 
             <TextBox x:Name="TextBox_Entry"
