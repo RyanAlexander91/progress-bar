@@ -114,12 +114,12 @@ namespace ProgressBar.UserInterface.WPF
 
         private static void DisplayAcknowledgementsDialog()
         {
-            MessageBox.Show("Progress Bar - Beta 1 - Application logo used as per the CC0 Creative Commons license.", "Acknowledgements", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Progress Bar - Beta 1\n\nApplication logo used as per the CC0 Creative Commons license.", "Acknowledgements", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private static void DisplayAboutDialog()
         {
-            MessageBox.Show("Application designed and developed by Ryan Alexander. 2018", "About", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Progress Bar - Beta 1\n\nApplication designed and developed by Ryan Alexander.\n\n2018", "About", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         #endregion
