@@ -114,7 +114,7 @@ namespace ProgressBar.UserInterface.WPF
 
         private static void DisplayAcknowledgementsDialog()
         {
-            MessageBox.Show("Progress Bar application logo used as per the CC0 Creative Commons license.", "Acknowledgements", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Progress Bar - Beta 1 - Application logo used as per the CC0 Creative Commons license.", "Acknowledgements", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private static void DisplayAboutDialog()

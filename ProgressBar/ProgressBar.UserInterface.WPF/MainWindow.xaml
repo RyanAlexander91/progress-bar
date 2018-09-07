@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgressBar.UserInterface.WPF"
         mc:Ignorable="d"
-        Title="Progress Bar" Height="300" Width="300">
+        Title="Progress Bar - Beta 1" Height="300" Width="300">
     <DockPanel x:Name="DockPanel_Main">
 
         <!-- Menu -->
