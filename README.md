@@ -1,9 +1,10 @@
 # Progress Bar
+
 Simple WPF application demonstrating use of a Progress Bar. Built using C#, .Net Standard 2.0 Class Libraries and including a Windows Presentation Foundation (WPF) user interface.
 
 ## Project Requirements:
 
-* Visual Studio 2019 & .NET Framework 4.8
+- **Visual Studio 2019** & **.NET Framework 4.8**
 
 ## How to Install:
 
