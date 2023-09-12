@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ProgressBar.UserInterface.WindowsAppSDK (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ProgressBar.UserInterface.WindowsAppSDK (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

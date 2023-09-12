@@ -1,0 +1,124 @@
+﻿<Window
+    x:Class="ProgressBar.UserInterface.WindowsAppSDK.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProgressBar.UserInterface.WindowsAppSDK"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel x:Name="StackPanel_Main" 
+                Orientation="Vertical"
+                Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}">
+
+        <!-- Menu -->
+        <MenuBar x:Name="MainMenuBar">
+
+            <MenuBarItem x:Name="MenuBarItem_File"
+                         Title="File">
+                <MenuFlyoutItem x:Name="MenuFlyoutItem_Reset"
+                      Text="Reset"
+                      Click="ResetApplication_Click"/>
+                <MenuFlyoutSeparator/>
+                <MenuFlyoutItem x:Name="MenuFlyoutItem_Exit"
+                      Text="Exit"
+                      Click="MenuFlyoutItem_Exit_Click"/>
+            </MenuBarItem>
+
+            <MenuBarItem x:Name="MenuItem_Help"
+                      Title="Help">
+                <MenuFlyoutItem x:Name="MenuFlyoutItem_Acknowledgements"
+                          Text="Acknowledgement"
+                          Click="MenuFlyoutItem_Acknowledgements_Click"/>
+                <MenuFlyoutItem x:Name="MenuFlyoutItem_About"
+                          Text="About"
+                          Click="MenuFlyoutItem_About_Click"/>
+            </MenuBarItem>
+        </MenuBar>
+
+
+
+        <Grid x:Name="Grid_MainGrid">
+
+            <!-- Grid Row and Column Definitions -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="20" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <!-- Controls -->
+
+            <TextBlock x:Name="TextBlock_Information"
+                   Grid.Column="1"
+                   Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,10"
+                   Text="Please enter a number between 0 and 100 to see the progress bar update" 
+                   TextWrapping="Wrap"/>
+
+            <ProgressBar x:Name="ProgressBar_Main"
+                         Grid.Column="1"
+                         Grid.Row="2"
+                         Height="20"
+                         Margin="0,0,0,10">
+            </ProgressBar>
+
+            <TextBox x:Name="TextBox_Entry"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       Height="20"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       />
+
+            <Button x:Name="Button_Update"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    Margin="0,0,0,10"
+                    Content="Update"
+                    Click="Button_Update_Click"/>
+
+            <Button x:Name="Button_Reset"
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    
+                    Content="Reset"
+                    Click="ResetApplication_Click"/>
+
+        </Grid>
+
+        <!-- Invalid Content Dialog -->
+        <ContentDialog x:Name="ContentDialog_InvalidContent"
+                       Title="Invalid Input"
+                       Content="Please enter a valid number between 0 and 100"
+                       CloseButtonText="Ok">
+        </ContentDialog>
+
+        <!-- Acknowledgements Conent Dialog -->
+        <ContentDialog x:Name="ContentDialog_Acknowledgements"
+                       Title="Progress Bar"
+                       Content="Progress Bar - Beta 1\n\nApplication logo used as per the CC0 Creative Commons license."
+                       CloseButtonText="Ok">
+        </ContentDialog>
+
+        <!-- About Conent Dialog -->
+        <ContentDialog x:Name="ContentDialog_About"
+                       Title="About"
+                       Content="Progress Bar - Beta 1 | Application designed and developed by Ryan Alexander. 2021"
+                       CloseButtonText="Ok">
+        </ContentDialog>
+
+    </StackPanel>
+</Window>
