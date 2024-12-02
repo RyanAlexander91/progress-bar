@@ -28,6 +28,10 @@ namespace ProgressBar.UserInterface.WindowsAppSDK
         public MainWindow()
         {
             this.InitializeComponent();
+
+            // Set AppTitleBar UIElement as Titlebar
+            Window window = this;
+            window.ExtendsContentIntoTitleBar = true; // Enables custom titlebar
         }
 
         #endregion
